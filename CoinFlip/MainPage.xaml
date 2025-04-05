@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoinFlip.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Image
+                x:Name="Moeda"
+                Source="moeda.png.png"
+                HeightRequest="185"/>
+                
+            <Label
+                Text="CoinFlip"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Picker x:Name="Picker"
+                Title="Escolha o lado da moeda: ">
+                <Picker.Items>
+                    <x:String>Cara</x:String>
+                    <x:String>Coroa</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Girar" 
+                SemanticProperties.Hint="Girar a moeda"
+                Clicked="FlipButton_Clicked"
+                HorizontalOptions="Fill"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
