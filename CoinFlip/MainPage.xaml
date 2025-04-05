@@ -18,7 +18,7 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Picker x:Name="Picker"
+            <Picker x:Name="SelecaoPicker"
                 Title="Escolha o lado da moeda: ">
                 <Picker.Items>
                     <x:String>Cara</x:String>

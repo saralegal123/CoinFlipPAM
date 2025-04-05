@@ -1,4 +1,6 @@
-﻿namespace CoinFlip
+﻿using CoinFlip;
+
+namespace CoinFlip
 {
     public partial class MainPage : ContentPage
     {
@@ -11,16 +13,29 @@
 
         private void FlipButton_Clicked(object sender, EventArgs e)
         {
+            //sorteio da moeda (random)
+            Random random = new Random();
+            int sorteio = random.Next(2);
 
-            /*count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+            if(sorteio == 0)
+            {
+                MoedaImage.Source = "cara.png";
+            }
             else
-                CounterBtn.Text = $"Clicked {count} times";
+            {
+                MoedaImage.Source = "coroa.png";
+            }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);*/
+            //verificar qual opção foi selecionada
+            //se eu selecionei cara e deu...
+            if (SelecaoPicker.SelectedIndex == sorteio)
+            {
+                DisplayAlert("EBA!", "VOCÊ VENCEU", "Ok");
+            }
+            else
+            {
+                DisplayAlert("POXA, NÃO FOI DESSA VEZ...", "TENTE DE NOVO!", "Ok");
+            }
         }
     }
-
 }
