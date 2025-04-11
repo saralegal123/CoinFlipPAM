@@ -10,7 +10,7 @@
             
             <Image
                 x:Name="Moeda"
-                Source="moeda.png.png"
+                Source="moeda.png"
                 HeightRequest="185"/>
                 
             <Label
@@ -27,7 +27,7 @@
             </Picker>
 
             <Button
-                x:Name="CounterBtn"
+                x:Name="FlipButton"
                 Text="Girar" 
                 SemanticProperties.Hint="Girar a moeda"
                 Clicked="FlipButton_Clicked"

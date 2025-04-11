@@ -17,20 +17,21 @@ namespace CoinFlip
             Random random = new Random();
             int sorteio = random.Next(2);
 
+            //animação();
             if(sorteio == 0)
             {
-                MoedaImage.Source = "cara.png";
+                Moeda.Source = "cara.png";
             }
             else
             {
-                MoedaImage.Source = "coroa.png";
+                Moeda.Source = "coroa.png";
             }
 
             //verificar qual opção foi selecionada
-            //se eu selecionei cara e deu...
+            //se eu selecionei cara e der cara -->
             if (SelecaoPicker.SelectedIndex == sorteio)
             {
-                DisplayAlert("EBA!", "VOCÊ VENCEU", "Ok");
+                DisplayAlert("EBA!", "VOCÊ VENCEU! <3 ", "Ok");
             }
             else
             {
