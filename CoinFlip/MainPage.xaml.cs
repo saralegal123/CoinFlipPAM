@@ -31,7 +31,7 @@ namespace CoinFlip
             //se eu selecionei cara e der cara -->
             if (SelecaoPicker.SelectedIndex == sorteio)
             {
-                DisplayAlert("EBA!", "VOCÊ VENCEU! <3 ", "Ok");
+                DisplayAlert("EBA!", "VOCÊ VENCEU! :D ", "Ok");
             }
             else
             {
